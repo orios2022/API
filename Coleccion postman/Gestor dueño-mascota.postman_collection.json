@@ -1,0 +1,261 @@
+{
+	"info": {
+		"_postman_id": "a921d770-0ec6-42ab-a17d-83de913db5c3",
+		"name": "Gestor dueño-mascota",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Crear dueño",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"dni\": 35111999,\r\n    \"nombre\": \"luis\",\r\n    \"apellido\": \"massa\",\r\n    \"celular\": 11135135\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/duenio/crear",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"duenio",
+						"crear"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Editar dueño",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id_duenio\": [],\r\n    \"dni\": [],\r\n    \"nombre\": \"\",\r\n    \"apellido\": \"\",\r\n    \"celular\": []\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/duenio/editar",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"duenio",
+						"editar"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Obtener dueños",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/duenio/traer",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"duenio",
+						"traer"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Eliminar dueño",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/duenio/eliminar/(id)",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"duenio",
+						"eliminar",
+						"(id)"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Crear mascota",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"nombre\" : \"koko\",\r\n    \"especie\": \"gato\",\r\n    \"raza\": \"persa\",\r\n    \"color\": \"marron\",\r\n     \"duenio\": {\r\n        \"id_duenio\": 2,\r\n        \"dni\": 35111999,\r\n        \"nombre\": \"osvaldo\",\r\n        \"apellido\": \"massa\",\r\n        \"celular\": 11135135\r\n    }\r\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/mascota/crear",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"mascota",
+						"crear"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Editar mascota",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id_mascota\": 3,\r\n        \"nombre\": \"koko\",\r\n        \"especie\": \"gato\",\r\n        \"raza\": \"persa\",\r\n        \"color\": \"negro\",\r\n        \"duenio\": {\r\n            \"id_duenio\": 2,\r\n            \"dni\": 35111999,\r\n            \"nombre\": \"osvaldo\",\r\n            \"apellido\": \"massa\",\r\n            \"celular\": 11135135\r\n        }\r\n\r\n\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/mascota/editar",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"mascota",
+						"editar"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Obtener mascota",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/mascota/traer",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"mascota",
+						"traer"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DTO mascota-dueño",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/mascota/traerDTO/(id)",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"mascota",
+						"traerDTO",
+						"(id)"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Obtener raza caniche",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/mascota/traer/caniche",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"mascota",
+						"traer",
+						"caniche"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Eliminar mascota",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/mascota/eliminar/(id)",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"mascota",
+						"eliminar",
+						"(id)"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
